@@ -5,7 +5,7 @@ const warrior = require("./routes/warrior.route")
 const app = express()
 const PORT = 8000 
 
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors({ origin: 'https://ancientindians.netlify.app' }));
 app.use(express.json());
 
 
