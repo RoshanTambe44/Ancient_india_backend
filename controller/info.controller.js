@@ -14,8 +14,9 @@ const getInfoByName = async (req, res) => {
     try {
         const { name } = req.params;
         console.log(name);
+
         
-        const info = await Info.findOne({ title: name });
+        const info = await Info.findOne({ title:new RegExp(`^${name}$`, 'i') });
         console.log(info);
 
         if (!info) {
